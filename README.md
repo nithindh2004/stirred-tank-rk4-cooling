@@ -145,7 +145,9 @@ The 41 scientific tests (the suite described in the reports) cover the model equ
 
 ## References and attribution
 
-**Original project.** The base single-state RK4 model, its parameter set and its analytical comparison come from the ESC113M course project at IIT Kanpur by **ESC113M Group 03**. Their code and report are included unchanged in `docs/original_esc113m/`, with the group's permission. The original files identify the authors as "Group – 03" and do not list individual names.
+**Original project.** The base single-state RK4 model, its parameter set and analytical comparison were developed collaboratively as the ESC113M Group 03 project at IIT Kanpur by **Nithin D H, Sanjeeta Singh, and Eslavath Pinki**, Department of Chemical Engineering. The original MATLAB code and course report are included unchanged in `docs/original_esc113m/`, with permission from all group members. Although the original submitted files identify the authors only as "Group – 03", the individual contributors are acknowledged here by name.
+
+**Acknowledgement.** The author acknowledges the contributions of Sanjeeta Singh and Eslavath Pinki to the original ESC113M Group 03 project and thanks them for granting permission to redistribute the original project materials.
 
 **V3 extension.** The coupled model, the analyses, the Python and MATLAB/Octave implementations, the tests, the figures, the data and both reports were developed by Nithin D H, Department of Chemical Engineering, IIT Kanpur, through three versions. `CHANGELOG.md` and `docs/v2_review_response.md` record what changed and why. `LICENSING.md` lists what came from where. To cite this work, see `CITATION.cff`.
 
