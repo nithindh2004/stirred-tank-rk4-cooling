@@ -1,0 +1,19 @@
+quantity,python,octave,type,abs_diff,runtime
+Original model T_L(1800 s) [K],354.0614864,354.061486,deterministic,4.249716881e-07,GNU Octave 8.4.0
+Coupled baseline T_L(1800 s) [K],357.8131092,357.813109,deterministic,1.773828444e-07,GNU Octave 8.4.0
+Coupled baseline T_J(1800 s) [K],315.3270375,315.327037,deterministic,4.541517455e-07,GNU Octave 8.4.0
+"Max |RK4 - exact|, dt = 1 s [K]",3.188046094e-08,3.188e-08,deterministic,4.609378276e-13,GNU Octave 8.4.0
+Observed RK4 order,4.223145985,4.2231,deterministic,4.598473099e-05,GNU Octave 8.4.0
+"Energy residual, Simpson [J]",0.004397172248,0.004397,deterministic,1.72247991e-07,GNU Octave 8.4.0
+Nominal optimum speed [rpm],120.142852,120.1429,deterministic,4.796874917e-05,GNU Octave 8.4.0
+Nominal optimum energy [kWh],0.1852240036,0.185224,deterministic,3.582739966e-09,GNU Octave 8.4.0
+Chance-constrained speed on OPT [rpm],293.1390762,291.635,Monte Carlo (independent samples),1.504076233,GNU Octave 8.4.0
+Recommended speed after rounding [rpm],295,295,Monte Carlo (independent samples),0,GNU Octave 8.4.0
+Recommended P(pass) on VAL,0.953865,0.9523,Monte Carlo (independent samples),0.001565,GNU Octave 8.4.0
+Recommended expected energy [kWh],1.076134253,1.0761,Monte Carlo (independent samples),3.425308271e-05,GNU Octave 8.4.0
+V2 285 rpm P(pass) under V3 model,0.94729,0.9456,Monte Carlo (independent samples),0.00169,GNU Octave 8.4.0
+Adaptive calibrated margin on CAL [K],0.1862754822,0.1825,Monte Carlo (independent samples),0.003775482178,GNU Octave 8.4.0
+Adaptive margin after pre-declared rounding [K],0.2,0.2,Monte Carlo (independent samples),0,GNU Octave 8.4.0
+Adaptive P(pass) on VAL,0.95965,0.9593,Monte Carlo (independent samples),0.00035,GNU Octave 8.4.0
+Adaptive one-sided lower bound on VAL,0.9589200071,0.9586,Monte Carlo (independent samples),0.0003200071123,GNU Octave 8.4.0
+Adaptive mean energy [kWh],0.4963280374,0.5026,Monte Carlo (independent samples),0.006271962596,GNU Octave 8.4.0

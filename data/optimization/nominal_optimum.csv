@@ -1,0 +1,3 @@
+method,rpm,mdot,T_L_tf_K,energy_kWh,at_flow_bound,dE_dmdot_kWh_per_kg_s
+grid search (5 rpm x 0.005 kg/s),125,0.49,354.9984268,0.186366226,,
+continuous (Brent root + bounded scalar minimisation),120.142852,0.5,355,0.1852240036,True,-0.03163202564

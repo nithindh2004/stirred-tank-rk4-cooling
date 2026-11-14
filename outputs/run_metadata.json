@@ -1,0 +1,47 @@
+{
+  "project": "jacketed-stirred-tank-cooling-optimization",
+  "version": "3.0.0",
+  "python": "3.13.18",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "pandas": "3.0.5",
+  "matplotlib": "3.11.2",
+  "platform": "Linux",
+  "datasets": {
+    "OPT": {
+      "seed": 20261109,
+      "n": 20000,
+      "purpose": "optimisation of fixed settings (chance-constrained search, rounding check)"
+    },
+    "CAL": {
+      "seed": 20261112,
+      "n": 20000,
+      "purpose": "calibration and configuration selection of the adaptive policy"
+    },
+    "VAL": {
+      "seed": 20261120,
+      "n": 200000,
+      "purpose": "independent validation of every selected design and policy (used once)"
+    },
+    "VAL2": {
+      "seed": 20261121,
+      "n": 200000,
+      "purpose": "fresh validation, used only if a design fails VAL and is modified by the pre-declared rule"
+    },
+    "STRESS": {
+      "seed": 20261114,
+      "n": 50000,
+      "purpose": "model-form and robustness stress tests (evaluation only, no selection)"
+    }
+  },
+  "noise_seeds": {
+    "CAL": 31,
+    "VAL": 40,
+    "VAL2": 41,
+    "STRESS": 34
+  },
+  "sobol_seed": 20261113,
+  "reliability_target": 0.95,
+  "acceptance_rule": "one-sided 95% Wilson lower bound of P(pass) >= 0.95",
+  "runtime_s": 35.5
+}

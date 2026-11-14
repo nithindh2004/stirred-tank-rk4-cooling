@@ -1,0 +1,29 @@
+\begin{tabular}{lllp{4.3cm}p{4.3cm}}
+\toprule
+Symbol & Value & Unit & Description & Classification \\
+\midrule
+$V$ & 0.5 & m\textsuperscript{3} & liquid volume & carried over from ESC113M \\
+$\rho_L$ & 1000 & kg/m\textsuperscript{3} & liquid density & carried over from ESC113M \\
+$C_{p,L}$ & 4180 & J/(kg K) & liquid heat capacity & carried over from ESC113M \\
+$T_0$ & 370 & K & initial liquid temperature & carried over from ESC113M \\
+$T_{in}$ & 300 & K & coolant inlet temperature (original fixed coolant) & carried over from ESC113M \\
+$A$ & 2 & m\textsuperscript{2} & heat-transfer area & carried over from ESC113M \\
+$U_{ref}$ & 150 & W/(m\textsuperscript{2} K) & overall coefficient at the reference point & carried over; needs calibration \\
+$t_f$ & 1800 & s & batch horizon & carried over from ESC113M \\
+$C_{p,C}$ & 4180 & J/(kg K) & coolant heat capacity (water) & literature property value \\
+$\rho_C$ & 1000 & kg/m\textsuperscript{3} & coolant density (water) & literature property value \\
+$N_P$ & 5 & - & impeller power number (turbulent Rushton-type turbine) & literature-supported; vendor calibration \\
+$M_J$ & 10 & kg & effective well-mixed jacket inventory & case-study assumption; needs geometry \\
+$N_{ref}$ & 300 & rpm & reference agitator speed & case-study assumption \\
+$\dot m_{ref}$ & 0.2 & kg/s & reference coolant flow & case-study assumption \\
+$e_N$ & 0.25 & - & U exponent on speed & case-study assumption; needs calibration \\
+$e_M$ & 0.33 & - & U exponent on coolant flow & case-study assumption; needs calibration \\
+$D$ & 0.3 & m & impeller diameter & case-study assumption \\
+$\eta_{ag}$ & 0.75 & - & agitator drive efficiency & case-study assumption; vendor calibration \\
+$\Delta P_{ref}$ & 50000 & Pa & coolant-loop pressure drop at mdot\_ref & case-study assumption; vendor calibration \\
+$\eta_p$ & 0.65 & - & pump efficiency & case-study assumption; vendor calibration \\
+$\dot m_{max}$ & 0.5 & kg/s & maximum deliverable coolant flow (pump limit) & case-study assumption (equipment limit) \\
+$N$ & 100-600 & rpm & agitator speed bounds & case-study assumption \\
+$T_{target}$ & 355 & K & liquid temperature required at t\_f & illustrative design constraint \\
+\bottomrule
+\end{tabular}

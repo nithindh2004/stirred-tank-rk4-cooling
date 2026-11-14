@@ -1,0 +1,4 @@
+scenario,wall_fouling_share,eN,eM,T_L_tf_recommended_K,fixed_recommended_pass,adaptive_pass,adaptive_mean_energy_kWh,reoptimised_rpm,reoptimised_m,reoptimised_expected_energy_kWh
+Weak scaling (wall/fouling share 0.60),0.6,0.127,0.168,354.0825444,0.7195,0.62426,1.067653504,,,
+Nominal closure,0.2125,0.25,0.33,352.2692691,0.95264,0.96012,0.4998179954,293.1390762,0.5,1.058058804
+Strong scaling (no wall/fouling resistance),0,0.317,0.419,351.2220669,0.98788,0.8152,0.3605630787,228.95298,0.5,0.5635088235

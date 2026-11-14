@@ -1,0 +1,25 @@
+# Response to the V2 technical review
+
+Each review point was checked against the V2 code and data before any change was made. Quantities in brackets come from the V2 code run on its own data unless stated otherwise.
+
+| # | Review point | Assessment | Evidence | Action in V3 |
+|---|---|---|---|---|
+| 2.1 | Simulated flow can exceed the 0.50 kg/s pump limit | **Correct; critical** | At a 0.50 kg/s command, 50.1 % of V2 samples exceeded the limit (max 0.62 kg/s). With the cap, V2's 285 rpm setting drops to 94.73 % on the V3 validation set (lower bound 94.65 %), below the requirement. | Saturated actuator `min(ṁ_max, ṁ_cmd(1+0.05z))` (truncation considered and rejected, see `docs/mathematical_model.md`). Every optimisation and Monte Carlo result was recomputed. Recommendation: 285 → **295 rpm**. |
+| 2.2 | Pump energy uses the nominal flow | **Correct; small effect** | Mean pump energy 0.113 kWh at the delivered flow vs 0.120 kWh at the command. | Pump power at the delivered flow; the objective is the expected energy; Eq. for E written as a time integral. |
+| 2.3 | Validation data may influence selection | **Correct** | V2's `run_all.py` re-checked the rounded design on the validation set inside a `while` loop. It never triggered, but the protocol was wrong. | Separate OPT/CAL/VAL/VAL2/STRESS sets, each with one purpose; a lower-confidence-bound acceptance rule; every rounding rule written into the code before validation; a fresh set reserved for any post-validation modification; validation seeds replaced for the final release; full audit trail in `data/optimization/recommended_setpoint_audit_trail.csv`. |
+| 2.4 | Figure 8 annotation inconsistent | **Correct** | V2 labelled 2.1 % of batches (> 3.2 kWh, i.e. phase-2 speed above about 490 rpm) as "speed-capped"; only 1.16 % were capped. | Capped batches drawn separately in red; both quantities reported (V3: 2.34 % above 3.2 kWh, 1.27 % capped). |
+| 2.5 | Extend the model-form analysis | **Agreed, with a caveat** | No data supports a probability distribution for the exponents. | Physical admissibility bound from film-coefficient scaling, three named closures, an exponent grid and the adaptive policy under each closure. No distributions were assigned. |
+| 2.6 | Jacket inventory vs geometry | **Correct clarification** | The V2 wording could be read as "geometry does not matter". | Renamed an *isolated thermal-inventory* study; geometric coupling discussed (plain-jacket Re ≈ 460, laminar). |
+| 2.7 | Recheck equipment feasibility | **Agreed** | — | Four-way parameter classification; equipment and process checks table. |
+| 3.x | Verify equations, RK4, energy, implementations | **Done** | Signs and units checked; observed order 4.22; Simpson residual 0.0044 J; Octave agrees. | Convergence against the exact solution; stability limit; 41 automated tests. |
+
+## Issues found during the audit that the review did not raise
+1. **The well-mixed jacket is a conservative limit.** A plug-flow jacket raises the effective conductance by 9–14 %. Quantified with a tanks-in-series RK4 model: the recommended setting's pass rate rises from 95.0 % to 98.5 % with 10 cells.
+2. **A post-validation modification in the V3 development run.** The first V3 run validated the adaptive policy with its calibrated margin, then, after the independent Octave replication fell just short of the acceptance rule, rounded the margin up and re-validated it on a third fresh set. That respected the letter of the protocol but still let a validation result trigger a change. The final release declares the rounding rule (margin rounded up to 0.05 K, the counterpart of rounding the speed up to 5 rpm) in the code before validation, validates the policy once, and replaces every validation seed examined during development (20261110, 20261111, 20261115) with new ones (20261120, 20261121). The policy passes on first validation: 95.97 %, lower bound 95.89 %.
+3. **The adaptive policy is more sensitive to the heat-transfer closure than the fixed setting**, because it extrapolates a speed change through e_N (62 % and 82 % pass under the weak and strong closures, vs 72 % and 99 % for the fixed setting). This limitation is now stated in both reports.
+4. **Local flow perturbations above the pump limit.** The local sensitivity study moved the flow up by 5 % and 20 % without saturation, which at the recommended 0.50 kg/s evaluated 0.525 and 0.60 kg/s. The perturbations are now saturated at the pump limit, and a test enforces it.
+
+## Where the review framing was refined rather than adopted literally
+* **Saturation vs truncation (2.1).** The review suggested considering either. Saturation was chosen because it represents a flow loop meeting a pump limit. Truncation would imply the loop becomes more accurate near the limit, which has no physical basis.
+* **"Use actual flow in pump energy" (2.2).** Adopted. For the deterministic optimum the actual flow equals the command, so that result does not change.
+* **Lower-bound rule (2.3).** Applied at both stages: on the optimisation data (sample pass fraction ≥ 95.25 % for n = 20,000) and as the acceptance test on independent data.

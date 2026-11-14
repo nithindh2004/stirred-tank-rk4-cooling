@@ -1,0 +1,24 @@
+\begin{tabular}{lrrl}
+\toprule
+Quantity & Python & Octave & Type \\
+\midrule
+Original model $T_L$(1800 s) [K] & 354.0615 & 354.0615 & deterministic \\
+Coupled baseline $T_L$(1800 s) [K] & 357.8131 & 357.8131 & deterministic \\
+Coupled baseline $T_J$(1800 s) [K] & 315.3270 & 315.3270 & deterministic \\
+Max $|$RK4 - exact$|$, dt = 1 s [K] & 3.19e-08 & 3.19e-08 & deterministic \\
+Observed RK4 order & 4.2231 & 4.2231 & deterministic \\
+Energy residual, Simpson [J] & 0.0044 & 0.0044 & deterministic \\
+Nominal optimum speed [rpm] & 120.1429 & 120.1429 & deterministic \\
+Nominal optimum energy [kWh] & 0.1852 & 0.1852 & deterministic \\
+Chance-constrained speed on OPT [rpm] & 293.1391 & 291.6350 & Monte Carlo \\
+Recommended speed after rounding [rpm] & 295.0000 & 295.0000 & Monte Carlo \\
+Recommended P(pass) on VAL & 0.9539 & 0.9523 & Monte Carlo \\
+Recommended expected energy [kWh] & 1.0761 & 1.0761 & Monte Carlo \\
+V2 285 rpm P(pass) under V3 model & 0.9473 & 0.9456 & Monte Carlo \\
+Adaptive calibrated margin on CAL [K] & 0.1863 & 0.1825 & Monte Carlo \\
+Adaptive margin after pre-declared rounding [K] & 0.2000 & 0.2000 & Monte Carlo \\
+Adaptive P(pass) on VAL & 0.9597 & 0.9593 & Monte Carlo \\
+Adaptive one-sided lower bound on VAL & 0.9589 & 0.9586 & Monte Carlo \\
+Adaptive mean energy [kWh] & 0.4963 & 0.5026 & Monte Carlo \\
+\bottomrule
+\end{tabular}

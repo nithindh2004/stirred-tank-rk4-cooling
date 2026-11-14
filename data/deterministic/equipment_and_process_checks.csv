@@ -1,0 +1,13 @@
+check,value,unit,comment
+Tank diameter for H = T (0.50 m3),0.8602540138,m,geometry implied by V; no tank drawing exists
+Wetted wall + base area at H = T,2.906118379,m2,A = 2.0 m2 is of the same order
+Impeller-to-tank diameter ratio D/T,0.3487342055,-,within the commonly used 0.3-0.5 range
+Impeller Reynolds number at 120 rpm (water-like),225000,-,turbulent: constant N_P applicable
+Shaft power per volume at recommended speed,2.888142188,kW/m3,high-intensity duty; check with vendor
+Loop pressure drop at 0.50 kg/s,3.125,bar,extrapolated from assumed 0.5 bar at 0.2 kg/s
+Pump flow turndown modelled (0.05-0.50 kg/s),10,:1,"model assumes variable-speed pump, constant efficiency"
+Jacket gap implied by M_J over A,5,mm,thin; see isolated-inventory study
+"Plain annular jacket Re at 0.50 kg/s, Re = 2 m/(pi T mu)",462.5231052,-,laminar: assumed U needs a baffled/spiral jacket
+Coolant outlet maximum (baseline peak T_J),318.0654767,K,about 45 C; confirm against site cooling-water limits
+Liquid density range 300-370 K (water),960,kg/m3,about 996 to 960 kg/m3; constant 1000 used (<= 4 %)
+Liquid Cp range 300-370 K (water),4.21,kJ/(kg K),about 4.18 to 4.21; constant 4.18 used (< 1 %)

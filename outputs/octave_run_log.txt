@@ -1,0 +1,15 @@
+octave: X11 DISPLAY environment variable not set
+octave: disabling GUI features
+Runtime: GNU Octave 8.4.0
+Original fixed-coolant T_L(1800) = 354.061486 K
+Coupled baseline T_L(1800) = 357.813109 K, T_J = 315.327037 K
+Max |RK4(dt=1) - exact| = 3.188e-08 K
+Observed RK4 order (dt 2-30 s) = 4.2231
+Energy residual (Simpson) = 0.004397 J
+Reduced-order UA_eff = 220.7746 W/K -> T_L(1800) = 357.8790 K
+Nominal optimum: 120.1429 rpm, 0.5000 kg/s, E = 0.185224 kWh
+Chance-constrained optimum (OPT): 291.635 rpm @ 0.500 kg/s, E = 1.0436 kWh
+Recommended setting: 295 rpm @ 0.50 kg/s; VAL P(pass) = 0.9523 [0.9513, 0.9532], one-sided LB = 0.9515, E = 1.0761 kWh
+V2 recommendation 285 rpm under V3 model: P(pass) = 0.9456
+Adaptive policy: calibrated delta 0.1825 K, rounded to 0.20 K; VAL P(pass) = 0.9593 [0.9585, 0.9602], LB 0.9586, mean E 0.5026 kWh, capped 0.0133, UA err sd 0.0104 (stage 1)
+Completed in 13.1 s.

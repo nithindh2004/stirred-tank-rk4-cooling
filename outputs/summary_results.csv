@@ -1,0 +1,18 @@
+metric,value,unit,source
+"Original model T_L(1800 s) at 300 rpm, 0.20 kg/s",354.0614864,K,deterministic/case_comparison.csv
+"Coupled model T_L(1800 s) at 300 rpm, 0.20 kg/s (RK4)",357.8131092,K,deterministic/case_comparison.csv
+RK4 observed order (dt 2-30 s),4.223145985,-,verification/timestep_convergence.csv
+RK4 max trajectory error at dt = 1 s,3.188046094e-08,K,verification/timestep_convergence.csv
+Nominal (deterministic) optimum speed,120.142852,rpm,optimization/nominal_optimum.csv
+Nominal optimum energy,0.1852240036,kWh/batch,optimization/nominal_optimum.csv
+Recommended agitator speed,295,rpm,optimization/recommended_setpoint_audit_trail.csv
+Recommended commanded coolant flow,0.5,kg/s,optimization/recommended_setpoint_audit_trail.csv
+Recommended setting expected energy (VAL),1.076134253,kWh/batch,optimization/recommended_setpoint_audit_trail.csv
+Recommended setting P(pass) (VAL),0.953865,-,optimization/recommended_setpoint_audit_trail.csv
+Recommended setting P(pass) one-sided 95% lower bound (VAL),0.9530872789,-,optimization/recommended_setpoint_audit_trail.csv
+Nominal optimum P(pass) (VAL),0.467185,-,monte_carlo/designs_under_v3_model.csv
+Adaptive policy margin delta,0.2,K,adaptive_policy/validation_summary.csv
+Adaptive policy P(pass) (independent),0.95965,-,adaptive_policy/validation_summary.csv
+Adaptive policy mean energy (independent),0.4963280374,kWh/batch,adaptive_policy/validation_summary.csv
+Adaptive policy speed-capped batches,0.01268,-,adaptive_policy/validation_summary.csv
+Adaptive policy 95th-percentile energy,1.566058846,kWh/batch,adaptive_policy/validation_summary.csv

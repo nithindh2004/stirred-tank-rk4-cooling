@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below. The base model is the ESC113M Group 03 course project (see references)."
+title: "Jacketed Stirred-Tank Cooling: Dynamic Modelling, Reliability-Based Optimisation and Adaptive Operation"
+version: "3.0.0"
+type: software
+authors:
+  - given-names: Nithin
+    family-names: "D H"
+    affiliation: "Department of Chemical Engineering, Indian Institute of Technology Kanpur"
+repository-code: "https://github.com/nithindh2004/jacketed-stirred-tank-cooling-optimization"
+keywords:
+  - jacketed vessel
+  - Runge-Kutta
+  - Monte Carlo
+  - chance-constrained optimisation
+  - Sobol sensitivity
+abstract: >-
+  Simulation study of a jacketed stirred-tank cooling process. Coupled liquid
+  and jacket-coolant energy balances are solved with RK4 and verified against
+  the exact solution, then used for deterministic and chance-constrained
+  optimisation of agitator speed and coolant flow, global sensitivity analysis,
+  a simulated adaptive operating policy and model-form stress testing. Extends
+  the ESC113M Group 03 course model. Code is MIT-licensed; reports, figures and
+  data are CC BY 4.0; the original group materials are excluded (LICENSING.md).
+references:
+  - type: report
+    title: "Cooling Dynamics of a Hot Liquid in a Well-Stirred Tank (ESC113M project report and MATLAB code)"
+    authors:
+      - name: "ESC113M Group 03, Indian Institute of Technology Kanpur"
+    notes: "Original single-state RK4 model; included unchanged in docs/original_esc113m/ with the group members' permission."

@@ -1,0 +1,7 @@
+numpy>=1.26
+scipy>=1.11
+pandas>=2.0
+matplotlib>=3.8
+pytest>=7.0
+python-docx>=1.1    # building the DOCX reports and the report-metadata test
+pypdf>=4.0          # report-metadata test only

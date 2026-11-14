@@ -1,0 +1,7 @@
+dataset,seed,n,noise_seed,purpose
+OPT,20261109,20000,,"optimisation of fixed settings (chance-constrained search, rounding check)"
+CAL,20261112,20000,31,calibration and configuration selection of the adaptive policy
+VAL,20261120,200000,40,independent validation of every selected design and policy (used once)
+VAL2,20261121,200000,41,"fresh validation, used only if a design fails VAL and is modified by the pre-declared rule"
+STRESS,20261114,50000,34,"model-form and robustness stress tests (evaluation only, no selection)"
+SOBOL,20261113,196608,,Saltelli/Jansen Sobol estimation

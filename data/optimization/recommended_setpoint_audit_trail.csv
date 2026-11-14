@@ -1,0 +1,4 @@
+stage,rpm,m,dataset,pass_frac,expected_energy_kWh,requirement,pass_ci_lo,pass_ci_hi,pass_lb95_one_sided,accepted
+OPT: continuous chance-constrained optimum,293.1390762,0.5,OPT,0.95255,1.058058804,sample pass >= 0.95253,,,,
+OPT: practical setpoint (speed rounded up to 5 rpm),295,0.5,OPT,0.9542,1.076163141,sample pass >= 0.95253,,,,
+VAL,295,0.5,VAL,0.953865,1.076134253,one-sided 95 % lower bound >= 0.95,0.952936877,0.9547756883,0.9530872789,True

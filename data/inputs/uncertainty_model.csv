@@ -1,0 +1,5 @@
+input,distribution,mean,sd,unit,basis
+U_ref,Normal,150,15,W/(m2 K),assumed: 10 % (1 sd) uncertainty in the reference coefficient
+M_J,Normal,10,1,kg,assumed: 10 % (1 sd) uncertainty in effective jacket inventory
+flow error z,Normal,0,1,-,"assumed: actual = min(m_max, m_cmd (1 + 0.05 z)) (flow-loop error, pump limit)"
+T_0,Normal,370,1,K,assumed: 1 K (1 sd) batch-to-batch variation of the initial temperature

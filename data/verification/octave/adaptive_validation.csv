@@ -1,0 +1,2 @@
+stage,delta_calibrated_K,delta_K,pass_frac,ci_lo,ci_hi,lb95,mean_energy_kWh,frac_capped
+1,0.182521820068,0.2,0.959345,0.958470619992,0.960201734798,0.958612396619,0.502642903385,0.01333

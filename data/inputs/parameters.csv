@@ -1,0 +1,24 @@
+symbol,value,unit,description,classification
+V,0.5,m3,liquid volume,carried over from ESC113M
+rho_L,1000.0,kg/m3,liquid density,carried over from ESC113M
+Cp_L,4180.0,J/(kg K),liquid heat capacity,carried over from ESC113M
+T_0,370.0,K,initial liquid temperature,carried over from ESC113M
+T_in,300.0,K,coolant inlet temperature (original fixed coolant),carried over from ESC113M
+A,2.0,m2,heat-transfer area,carried over from ESC113M
+U_ref,150.0,W/(m2 K),overall coefficient at the reference point,carried over; needs calibration
+t_f,1800.0,s,batch horizon,carried over from ESC113M
+Cp_C,4180.0,J/(kg K),coolant heat capacity (water),literature property value
+rho_C,1000.0,kg/m3,coolant density (water),literature property value
+N_P,5.0,-,impeller power number (turbulent Rushton-type turbine),literature-supported; vendor calibration
+M_J,10.0,kg,effective well-mixed jacket inventory,case-study assumption; needs geometry
+N_ref,300.0,rpm,reference agitator speed,case-study assumption
+mdot_ref,0.2,kg/s,reference coolant flow,case-study assumption
+e_N,0.25,-,U exponent on speed,case-study assumption; needs calibration
+e_M,0.33,-,U exponent on coolant flow,case-study assumption; needs calibration
+D,0.3,m,impeller diameter,case-study assumption
+eta_ag,0.75,-,agitator drive efficiency,case-study assumption; vendor calibration
+dP_ref,50000.0,Pa,coolant-loop pressure drop at mdot_ref,case-study assumption; vendor calibration
+eta_p,0.65,-,pump efficiency,case-study assumption; vendor calibration
+m_max,0.5,kg/s,maximum deliverable coolant flow (pump limit),case-study assumption (equipment limit)
+N range,100-600,rpm,agitator speed bounds,case-study assumption
+T_target,355.0,K,liquid temperature required at t_f,illustrative design constraint
